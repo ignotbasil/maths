@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>basils Webpage</title>
+</head>
+<body>
+    <header>
+        <h1><!DOCTYPE html>
+            <html>
+            <head>
+                <title>Prime Number Checker</title>
+                <script>
+                    function isPrime() {
+                        const number = parseInt(document.getElementById("number").value);
+                        
+                        if (isNaN(number)) {
+                            alert("Please enter a valid number.");
+                            return;
+                        }
+            
+                        if (number <= 1) {
+                            document.getElementById("result").innerHTML = `${number} is not a prime number.`;
+                            return;
+                        }
+            
+                        let isPrime = true;
+                        for (let i = 2; i <= Math.sqrt(number); i++) {
+                            if (number % i === 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+            
+                        if (isPrime) {
+                            document.getElementById("result").innerHTML = `${number} is a prime number.`;
+                        } else {
+                            document.getElementById("result").innerHTML = `${number} is not a prime number.`;
+                        }
+                    }
+                </script>
+            </head>
+            <body>
+              <p>Enter a number to check if it's prime:</p>
+                <input type="number" id="number">
+                <button onclick="isPrime()">Check</button>
+                <p id="result"></p>
+            </body>
+            </html></h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="subpage1.html">factorial of a number</a></li>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+            <li><a href="subpage2.html">trigonometric values</a></li>
+            <!-- Repeat the following line for subpages 3 through 100 -->
+            <li><a href="subpage100.html">Subpage 100</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <!-- Content for your main webpage goes here -->
+    </main>
+    
+    <footer>
+        <p>&copy; 2023 Your Name</p>
+    </footer>
+</body>
+</html>
